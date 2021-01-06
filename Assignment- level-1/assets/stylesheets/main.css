@@ -1,0 +1,290 @@
+/* Eric Mayers Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* My Reset */
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Colors */
+
+:root {
+    --primary:#4e9c46;
+    --secondary:#232B38;
+    --ternary:#d9edf8;
+    --danger:#FE4545;
+    --pure:#faf9f9;
+    --light:#F0F0F0;
+    --heaven:#928b8b;
+    --footer:#2D333F;
+}
+
+/* Typography */
+
+a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h3{
+    font-size: 1.5rem;
+    font-weight:700;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-weight:800;
+}
+
+/* Modular Classes */
+
+.container {
+    margin: 0 auto;
+    max-width:64rem;
+    padding: 0 2rem;
+}
+
+.flex{
+    display: flex;
+}
+ 
+.justify-between{
+    justify-content: space-between;
+}
+
+
+.items-center{
+    align-items: center;
+}
+
+/* Header */
+
+.header{
+    background-color: var(--secondary);
+    padding: .5rem 0;
+}
+
+.logo{
+    width: 120px;
+}
+
+.navbar li{
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.navbar li:last-child{
+    margin-right: 0;
+}
+
+.navbar li a{
+    color:var(--pure);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.navbar li:nth-child(2) a{
+    color: var(--primary);
+}
+
+@media (max-width:650px){
+    .column{
+        flex-direction: column;
+    }
+
+.logo{
+    margin-bottom: 1rem;
+}
+}
+
+/* Hero-Section */
+
+.hero-section{
+    padding: 4rem 0;
+    background-color: var(--ternary);
+}
+
+.about div{
+   width: 50%;
+}
+
+.about p{
+    color: var(--heaven);
+    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1.4rem 0;
+}
+
+.about h1{
+    font-family: helvetica;
+    color: var(--secondary);
+}
+
+.img-div{
+    margin-left: 2rem;
+}
+.about img{
+    width: 100%;
+}
+
+.btn{
+    background-color: var(--primary);
+    padding: 10px 15px;
+    color: var(--pure);
+    border-radius: 5px;
+    display: inline-block;
+}
+
+@media (max-width:650px){
+    .column{
+        flex-direction: column;
+    }
+
+    .img-div{
+        margin-left:0;
+        margin-top: 2rem;
+    }
+
+    .hero-section{
+        padding: 2rem 0;
+    }
+    
+    .about div{
+       width: 100%;
+       text-align: center;
+    }
+    
+    .about p{
+       text-align: justify;
+    }
+
+}
+
+/* Blog-Section */
+
+.use-src{
+    width: 30%;
+    text-align: left;
+}
+
+.use-src h3{
+    padding: 1rem 0;
+}
+
+.use-src p{
+    color: var(--heaven);
+    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 1rem; 
+}
+
+.use-src img{
+    width: 100%;
+}
+
+.blog h2{
+    padding: 2rem 0;
+}
+
+.blog{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+@media (max-width:650px){
+   .blog{
+       margin-bottom: 0;
+   }
+        
+    .use-src{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    }
+
+
+/* Footer */
+
+.footer{
+    background: var(--secondary);
+    padding: 2rem 0;
+}
+
+.icon i{
+   color: var(--pure);
+   margin-left: 10px;
+   font-size: 30px;
+}
+
+.footer span{
+    color: var(--pure);
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width:650px){
+    .footer span{
+        margin-bottom: 1rem;
+    }
+}
