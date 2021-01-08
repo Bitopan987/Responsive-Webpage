@@ -161,7 +161,7 @@ h4{
 }
 
 
-@media (max-width:515px){
+@media (max-width:565px){
    
     /* Hamburger Menu */
     
@@ -260,7 +260,7 @@ h4{
     color: var(--danger);
 }
 
-@media (max-width:515px){
+@media (max-width:556px){
     .hero-section article{
         flex-direction: column;
     }
